@@ -64,8 +64,7 @@ public class MD5 extends AppCompatActivity {
             for(int i=0;i<bytes.length;i++)
             {
                 sb.append(Integer.toString(( bytes[i]&0xff)+0x100,32).substring(1));
-                //pehle widen krra h and baad me 0x100 add krra nd hexadecimal me convert krde
-                // //and pehla character utha leta and builder me add krde
+               
             }
             generatedPassword=sb.toString();
             Log.d("BABBAR","generated password"+generatedPassword);
