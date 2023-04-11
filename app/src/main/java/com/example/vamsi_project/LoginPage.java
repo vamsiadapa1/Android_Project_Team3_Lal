@@ -100,7 +100,7 @@ public class LoginPage extends AppCompatActivity {
             }
         });
     }
-
+//showing the registered users
     public void goToHomePage(){
         user = mAuth.getCurrentUser();
         readRef = FirebaseDatabase.getInstance().getReference("Registered Users");
@@ -122,9 +122,7 @@ public class LoginPage extends AppCompatActivity {
                     }
                 }
             }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
+           
             }
         });
     }
