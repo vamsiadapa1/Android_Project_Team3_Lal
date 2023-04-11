@@ -90,9 +90,7 @@ public class Admin extends AppCompatActivity {
                 startActivity(i);
                 return false;
             }
-        });
-
-        logoutItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        });logoutItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(@NonNull MenuItem menuItem) {
                 FirebaseAuth.getInstance().signOut();
@@ -101,6 +99,8 @@ public class Admin extends AppCompatActivity {
                 finish();
                 return false;
             }
+        
+
         });
 
         return super.onCreateOptionsMenu(menu);
