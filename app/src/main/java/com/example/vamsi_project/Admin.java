@@ -9,8 +9,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -79,10 +80,8 @@ public class Admin extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu2, menu);
 
-
         MenuItem userInfo = menu.findItem(R.id.action_user_info);
-
-
+        MenuItem logoutItem=menu.findItem(R.id.action_logout);
 
         userInfo.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
@@ -91,6 +90,17 @@ public class Admin extends AppCompatActivity {
                 startActivity(i);
                 return false;
             }
+        });logoutItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(@NonNull MenuItem menuItem) {
+                FirebaseAuth.getInstance().signOut();
+                Intent i=new Intent(getApplicationContext(),LoginPage.class);
+                startActivity(i);
+                finish();
+                return false;
+            }
+        
+
         });
 
         return super.onCreateOptionsMenu(menu);
