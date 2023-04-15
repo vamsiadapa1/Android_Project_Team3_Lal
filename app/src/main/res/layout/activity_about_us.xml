@@ -39,25 +39,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Are you worried about the possibility of a security breach in the face of evolving threats and assaults? Do you require security to be included in everything? "
+                android:text="Today we cannot trust any social media websites they are selling our data to advetisers and leaking sensitive information to government so we came up with this app to
+to improve security of our messages and send them secretly on any social media since they cannot decrypt our messages without our decryption keys.With the help of our app your messages are fully secured.Happy secure Life :)"
                 android:drawablePadding="8dp"
                 android:padding="8dp"
                 android:textSize="20sp"
                 android:textColor="@color/purple"
                 android:textColorHighlight="@color/cardview_dark_background" />
-
-            <TextView
-                android:id="@+id/des"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="This App is used to assist you in implementing a zero trust framework so you can close gaps and simplify things. That is cleverly implemented built-in security. "
-                android:drawablePadding="8dp"
-                android:padding="8dp"
-                android:textSize="20sp"
-                android:textColor="@color/purple"
-                android:textColorHighlight="@color/cardview_dark_background" />
-
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

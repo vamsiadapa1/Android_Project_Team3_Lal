@@ -1,4 +1,4 @@
-package com.example.vamsi_project;
+package com.example.Endecryptmessanger;
 public class ReadWriteUserDetails {
     public String name,age,mobile,gender;
     public boolean admin;

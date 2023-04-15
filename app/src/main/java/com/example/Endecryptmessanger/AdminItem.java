@@ -1,4 +1,4 @@
-package com.example.vamsi_project;
+package com.example.Endecryptmessanger;
 
 public class AdminItem {
     private String itemName;

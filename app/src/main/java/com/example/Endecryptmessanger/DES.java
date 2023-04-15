@@ -1,4 +1,4 @@
-package com.example.vamsi_project;
+package com.example.Endecryptmessanger;
 
 import androidx.appcompat.app.AppCompatActivity;
 
