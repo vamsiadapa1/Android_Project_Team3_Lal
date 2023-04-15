@@ -17,3 +17,12 @@ Sequence Information:
 > By clicking on the reset password button it will take to the reset password page
 >By clicking on the About it will redirect to the  about app page
 >After clicking on logout and sign into the admin page it will redirect to admin page
+
+Test Credentials:
+for users>> 
+user name: encryptedtest@gmail.com
+password:App12345
+
+For Admin:
+user name:admin@admin.com
+password: admin123
