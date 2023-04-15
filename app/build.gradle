@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.vamsi_project'
+    namespace 'com.example.Endecryptmessanger'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.vamsi_project"
+        applicationId "com.example.Endecryptmessanger"
         minSdk 24
         targetSdk 33
         versionCode 1
