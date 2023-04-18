@@ -10,7 +10,7 @@
         android:id="@+id/adminText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Manage Users"
+        android:text="Users Info"
         android:textAlignment="center"
         android:textColor="@color/purple"
         android:textSize="36sp"

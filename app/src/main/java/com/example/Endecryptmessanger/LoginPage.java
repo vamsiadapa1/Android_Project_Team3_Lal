@@ -35,11 +35,14 @@ public class LoginPage extends AppCompatActivity {
     DatabaseReference dref;
     FirebaseUser user;
 
+    FirebaseUser currentUser;
+
 
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
+        currentUser = mAuth.getCurrentUser();
+//        String cId=currentUser.getUid();
         if(currentUser != null){
             progressBar=findViewById(R.id.progress_bar);
             progressBar.setVisibility(View.VISIBLE);
@@ -100,7 +103,7 @@ public class LoginPage extends AppCompatActivity {
             }
         });
     }
-//showing the registered users
+
     public void goToHomePage(){
         user = mAuth.getCurrentUser();
         readRef = FirebaseDatabase.getInstance().getReference("Registered Users");
@@ -111,6 +114,12 @@ public class LoginPage extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 progressBar.setVisibility(View.GONE);
                 if (dataSnapshot.hasChildren()) {
+                    if((dataSnapshot.child("blocked").getValue()).equals("true")){
+                        currentUser=null;
+//                        FirebaseAuth.getInstance().signOut();
+                        Toast.makeText(LoginPage.this, "You are not allowed to login", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     if ((dataSnapshot.child("admin").getValue().toString()) == "true") {
                         Intent i = new Intent(getApplicationContext(), Admin.class);
                         startActivity(i);
@@ -122,8 +131,9 @@ public class LoginPage extends AppCompatActivity {
                     }
                 }
             }
-           @Override
+            @Override
             public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
     }

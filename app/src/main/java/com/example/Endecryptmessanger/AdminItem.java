@@ -1,13 +1,37 @@
 package com.example.Endecryptmessanger;
 
+import com.google.firebase.auth.FirebaseUser;
+
 public class AdminItem {
     private String itemName;
-    private String itemDescription;
+    private String itemAge;
 
+    private String itemGender;
+    private String itemAdmin;
 
-    public AdminItem(String itemName, String itemDescription) {
+    private String blocked;
+
+    public String getBlocked() {
+        return blocked;
+    }
+
+    private String id;
+
+    public String getItemGender() {
+        return itemGender;
+    }
+
+    public String getItemAdmin() {
+        return itemAdmin;
+    }
+
+    public AdminItem(String itemName, String itemAge, String itemGender, String itemAdmin, String blocked, String id) {
         this.itemName = itemName;
-        this.itemDescription = itemDescription;
+        this.itemAge = itemAge;
+        this.itemGender=itemGender;
+        this.itemAdmin=itemAdmin;
+        this.blocked=blocked;
+        this.id=id;
 
     }
 
@@ -15,9 +39,11 @@ public class AdminItem {
         return itemName;
     }
 
-    public String getItemDescription() {
-        return itemDescription;
+    public String getItemAge() {
+        return itemAge;
     }
 
-
+    public String getItemUserId() {
+        return id;
+    }
 }

@@ -1,6 +1,5 @@
 package com.example.Endecryptmessanger;
 
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,12 +24,12 @@ public class SignUp extends AppCompatActivity {
     TextView loginRedirectTextView;
     Button signupButton;
     FirebaseAuth mAuth;
-
+//
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
+        if(currentUser != null ){
             Intent i =new Intent(this,LoginPage.class);
             startActivity(i);
             finish();
@@ -93,9 +92,9 @@ public class SignUp extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
                                     FirebaseUser FirebaseUser=mAuth.getCurrentUser();
+                                    FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
 
-                                    ReadWriteUserDetails itemDetailsObject=new ReadWriteUserDetails(nameStr,ageStr,mobileStr,genderStr,false);
-
+                                    ReadWriteUserDetails itemDetailsObject=new ReadWriteUserDetails(nameStr,ageStr,mobileStr,genderStr,false,"false");
                                     DatabaseReference referenceProfile= FirebaseDatabase.getInstance().getReference("Registered Users");
                                     referenceProfile.child(FirebaseUser.getUid()).setValue(itemDetailsObject).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override

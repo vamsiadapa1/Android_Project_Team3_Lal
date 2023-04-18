@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="4dp"
+        android:gravity="center"
         android:orientation="vertical"
         android:padding="4dp">
 
@@ -29,14 +30,27 @@
             android:layout_alignTop="@id/item_name"
             android:text="Blocked:False"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/item_delete_btn"
+        <TextView
+            android:id="@+id/item_gender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete"
-            android:textColor="@color/white" />
+            android:layout_alignTop="@id/item_name"
+            android:text="Gender:male"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/item_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/item_name"
+            android:text="Admin:False"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
 
 
     </LinearLayout>
