@@ -101,7 +101,6 @@ public class Admin extends AppCompatActivity {
                 i.putExtra("age",UserItem.get(position).getItemAge());
                 i.putExtra("gender",UserItem.get(position).getItemGender());
                 i.putExtra("admin",UserItem.get(position).getItemAdmin());
-                i.putExtra("blocked",UserItem.get(position).getBlocked());
                 i.putExtra("id",UserItem.get(position).getItemUserId());
                 startActivity(i);
 //                finish();
