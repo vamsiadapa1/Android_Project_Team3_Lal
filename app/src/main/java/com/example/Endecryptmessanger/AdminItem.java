@@ -22,7 +22,7 @@ public class AdminItem {
         return itemAdmin;
     }
 
-    public AdminItem(String itemName, String itemAge, String itemGender, String itemAdmin, String blocked, String id) {
+    public AdminItem(String itemName, String itemAge, String itemGender, String itemAdmin, String id) {
         this.itemName = itemName;
         this.itemAge = itemAge;
         this.itemGender=itemGender;
