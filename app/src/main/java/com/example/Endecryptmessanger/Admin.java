@@ -79,7 +79,7 @@ public class Admin extends AppCompatActivity {
                         String id=dataSnapshot.getKey().toString();
 //                    Toast.makeText(Admin.this, id, Toast.LENGTH_SHORT).show();
                         ReadWriteUserDetails user=dataSnapshot.getValue(ReadWriteUserDetails.class);
-                        UserItem.add(new AdminItem(user.name,user.age,user.gender,user.admin+"",user.blocked+"",id));
+                        UserItem.add(new AdminItem(user.name,user.age,user.gender,user.admin+"",id));
 
 
                 }

@@ -11,9 +11,6 @@ public class AdminItem {
 
     private String blocked;
 
-    public String getBlocked() {
-        return blocked;
-    }
 
     private String id;
 
@@ -30,7 +27,6 @@ public class AdminItem {
         this.itemAge = itemAge;
         this.itemGender=itemGender;
         this.itemAdmin=itemAdmin;
-        this.blocked=blocked;
         this.id=id;
 
     }

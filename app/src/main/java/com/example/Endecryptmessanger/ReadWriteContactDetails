@@ -1,6 +1,6 @@
 package com.example.Endecryptmessanger;
 
-public class ReadWriteContactDetails {
+    public class ReadWriteContactDetails {
     String name,email,message;
 
     public ReadWriteContactDetails(String name, String email, String message) {

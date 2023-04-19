@@ -14,6 +14,7 @@ public class AdminAdapter  extends RecyclerView.Adapter<AdminAdapter.ExampleView
 
     private ArrayList<AdminItem> mExampleList;
     private OnItemClickListener mListener;
+    
 
     public interface OnItemClickListener {
         void onItemClick(int position);
@@ -27,6 +28,9 @@ public class AdminAdapter  extends RecyclerView.Adapter<AdminAdapter.ExampleView
     public static class ExampleViewHolder extends RecyclerView.ViewHolder {
         public TextView mItemName;
         public TextView mItemStatus;
+         public TextView mItemGender;
+        public TextView mItemAdmin;
+
 
 
         public ExampleViewHolder(View itemView, final OnItemClickListener listener) {
@@ -34,6 +38,9 @@ public class AdminAdapter  extends RecyclerView.Adapter<AdminAdapter.ExampleView
 
             mItemName=itemView.findViewById(R.id.item_name);
             mItemStatus =itemView.findViewById(R.id.item_status);
+            mItemGender=itemView.findViewById(R.id.item_gender);
+            mItemAdmin=itemView.findViewById(R.id.item_admin);
+
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -63,9 +70,10 @@ public class AdminAdapter  extends RecyclerView.Adapter<AdminAdapter.ExampleView
     @Override
     public void onBindViewHolder(@NonNull ExampleViewHolder holder, int position) {
         AdminItem currentItem = mExampleList.get(position);
-        holder.mItemName.setText(currentItem.getItemName());
-        holder.mItemStatus.setText(currentItem.getItemDescription());
-
+        holder.mItemName.setText("Name: "+currentItem.getItemName());
+        holder.mItemStatus.setText("Age: "+currentItem.getItemAge());
+        holder.mItemGender.setText("Gender: "+currentItem.getItemGender());
+        holder.mItemAdmin.setText("Admin: "+currentItem.getItemAdmin());
     }
 
 

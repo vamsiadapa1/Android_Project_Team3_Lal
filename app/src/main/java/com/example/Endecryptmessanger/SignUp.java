@@ -94,7 +94,7 @@ public class SignUp extends AppCompatActivity {
                                     FirebaseUser FirebaseUser=mAuth.getCurrentUser();
                                     FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
 
-                                    ReadWriteUserDetails itemDetailsObject=new ReadWriteUserDetails(nameStr,ageStr,mobileStr,genderStr,false,"false");
+                                    ReadWriteUserDetails itemDetailsObject=new ReadWriteUserDetails(nameStr,ageStr,mobileStr,genderStr,false);
                                     DatabaseReference referenceProfile= FirebaseDatabase.getInstance().getReference("Registered Users");
                                     referenceProfile.child(FirebaseUser.getUid()).setValue(itemDetailsObject).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
