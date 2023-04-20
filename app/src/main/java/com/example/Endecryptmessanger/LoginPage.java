@@ -114,12 +114,7 @@ public class LoginPage extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 progressBar.setVisibility(View.GONE);
                 if (dataSnapshot.hasChildren()) {
-                    if((dataSnapshot.child("blocked").getValue()).equals("true")){
-                        currentUser=null;
-//                        FirebaseAuth.getInstance().signOut();
-                        Toast.makeText(LoginPage.this, "You are not allowed to login", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
+                    
                     if ((dataSnapshot.child("admin").getValue().toString()) == "true") {
                         Intent i = new Intent(getApplicationContext(), Admin.class);
                         startActivity(i);

@@ -10,4 +10,7 @@ public class ReadWriteUserDetails {
         this.gender = gender;
         this.admin=admin;
     }
+     public  ReadWriteUserDetails(){
+
+    }
 }
